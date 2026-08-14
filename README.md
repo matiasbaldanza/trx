@@ -292,3 +292,9 @@ Future analytics exports are private by default; anything intended for public sh
 
 See `docs/PRIVACY.md` and ADR 0011.
 
+## Authorship and LLM usage
+
+TRX is built by [Matias Baldanza](https://github.com/matiasbaldanza) ([X](https://x.com/matiasbaldanza)). Language models assist with drafting; they are not commit co-authors.
+
+See [LLM usage](docs/LLM-USAGE.md).
+
