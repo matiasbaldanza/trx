@@ -320,6 +320,7 @@ Before every commit:
 - review staged diff
 - run relevant checks
 - ensure no real client data or `.trx/` job records are included
+- do not add `Co-authored-by` trailers or any Cursor/Grok/ChatGPT/Codex attribution
 
 Do not use destructive Git operations or rewrite existing user history.
 

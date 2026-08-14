@@ -28,6 +28,8 @@ Planning, documentation, and ADR changes may be committed independently from imp
 
 Agents must inspect status/diffs before committing and must not include real client data, local `.trx/` records, secrets, or unrelated user changes.
 
+Never add `Co-authored-by` trailers. Never attribute commits to Cursor, Grok, ChatGPT, Codex, or any other model, editor, or tool. Commit author and committer must be the human owner only. If a tool injects a co-author trailer, strip it before the commit is published.
+
 Destructive history operations and rewriting user-authored commits require explicit user instruction.
 
 ## Consequences

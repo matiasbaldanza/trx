@@ -504,6 +504,8 @@ Use Git from the beginning.
 
 Keep commits atomic: one coherent change or decision per commit. A commit should be small enough to review, revert, or cherry-pick independently.
 
+Never add `Co-authored-by` trailers. Never attribute commits to Cursor, Grok, ChatGPT, Codex, or any other model, editor, or tool. Commit author and committer must be the human owner only. If a tool injects a co-author trailer, strip it before the commit is published.
+
 Do not mix unrelated documentation, refactors, features, tests, and fixes in one commit when they can reasonably be separated.
 
 Before committing:
