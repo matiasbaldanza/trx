@@ -207,19 +207,33 @@ trx reopen
 
 ## Installation during development
 
+Run these commands from the TRX development repository:
+
 ```bash
 pnpm install
-pnpm build
-pnpm link --global
+pnpm setup --force
 ```
 
-Then:
+`pnpm setup --force` is pnpm’s machine-level setup. Open a new terminal after it completes, then register the current development checkout globally:
+
+```bash
+pnpm run global:install
+```
+
+You can run the install or uninstall scripts from any directory by pointing pnpm at the development repository:
+
+```bash
+pnpm --dir "/path/to/trx" run global:install
+pnpm --dir "/path/to/trx" run global:uninstall
+```
+
+Then, from any translation project:
 
 ```bash
 trx
 ```
 
-should work globally.
+The global command points at the development checkout. After TypeScript changes, run `pnpm run global:install` (or `pnpm build`) to rebuild `dist/`; re-registration is not normally required. Re-register if the global link was uninstalled, the package `bin` path changed, or the checkout moved.
 
 ## Data as an asset
 
@@ -297,4 +311,3 @@ See `docs/PRIVACY.md` and ADR 0011.
 TRX is built by [Matias Baldanza](https://github.com/matiasbaldanza) ([X](https://x.com/matiasbaldanza)). Language models assist with drafting; they are not commit co-authors.
 
 See [LLM usage](docs/LLM-USAGE.md).
-
