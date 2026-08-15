@@ -1,0 +1,20 @@
+{
+  "name": "trx",
+  "version": "0.1.0",
+  "description": "Local-first translation operations timer and logger",
+  "type": "module",
+  "bin": {
+    "trx": "dist/src/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "pnpm build && node --test dist/tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
