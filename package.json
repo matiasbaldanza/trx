@@ -8,7 +8,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "pnpm build && node --test dist/tests/*.test.js"
+    "test": "pnpm build && node --test dist/tests/*.test.js",
+    "global:install": "pnpm build && pnpm add --global --force .",
+    "global:uninstall": "export PATH=\"${PNPM_HOME:-$HOME/Library/pnpm}/bin:$PATH\" && pnpm remove --global trx"
   },
   "engines": {
     "node": ">=20"
